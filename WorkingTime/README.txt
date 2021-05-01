@@ -1,57 +1,25 @@
-yŠT—vz
+ã€æ¦‚è¦ã€‘
+ã‚³ãƒžãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³å¼•æ•°ã‚ˆã‚Šå—ã‘å–ã£ãŸ2ã¤ã®æ•°å­—ï¼ˆå‡ºå‹¤æ™‚é–“ã¨é€€å‹¤æ™‚é–“ï¼‰ã«å¯¾ã—ã€ä¼‘æ†©æ™‚é–“ã‚’å·®å¼•ã„ãŸæ—¥çµ¦ã‚’æ±‚ã‚ã€åˆ†å˜ä½ã§è¨ˆç®—ã‚’è¡Œã†ã€‚
+â– åŠ´åƒæ¡ä»¶
+çµ¦ä¸Žï¼šæ™‚çµ¦900å††ï¼ˆåˆ†çµ¦15å††ï¼‰
+ä¼‘æ†©ï¼š45åˆ†ï¼ˆ8æ™‚é–“æœªæº€ã®å ´åˆï¼‰60åˆ†ï¼ˆ8æ™‚é–“ä»¥ä¸Šã®å ´åˆï¼‰
+æ®‹æ¥­ï¼š8æ™‚é–“ã‚’è¶…ãˆãŸåˆ†ã«å¯¾ã—1.25å€
 
 
+ã€ãƒ„ãƒ¼ãƒ«ãƒ»ç’°å¢ƒã€‘
+OSï¼šWindows10
+ç’°å¢ƒï¼šAdoptOpenJDK
+ã‚¨ãƒ‡ã‚£ã‚¿ï¼šVisial Studio Code
 
 
-
-yŠw‚ñ‚¾“_z
-EƒoƒŠƒf[ƒVƒ‡ƒ“ƒ`ƒFƒbƒN‚Ì•”•ª
-E’è”‰»‚·‚é
-	//‹Zƒƒ\ƒbƒh
-	void setWaza(String wn, String wdr) {
-		Boolean validationCheck =  wdr.matches("^[0-9]+\\.[0-9]$");
-		if(validationCheck == true) {
-			wazaName = wn;
-			wazaDmgRate += wdr;
-		}else {
-			System.out.println("[Error]‚í‚´‚ÌÝ’è‚ÉŽ¸”s‚µ‚Ü‚µ‚½");
-		}
-	}
+ã€èº“ã„ãŸç‚¹ã€‘
+ãƒ»getTimeãƒ¡ã‚½ãƒƒãƒ‰ã¯æˆ»ã‚Šå€¤ãŒãƒŸãƒªç§’ã®ç‚ºã€åŠ´åƒæ™‚é–“è¨ˆç®—ã®éƒ¨åˆ†ã§ãƒŸãƒªç§’ã‚’åˆ†ã«å¤‰æ›ã›ãšè¨ˆç®—ã—ãŸã“ã¨ã«ã‚ˆã‚Šè¨ˆç®—ãŒä¸Šæ‰‹ãã„ã‹ãªã‹ã£ãŸã€‚
 
 
-
-
-
-
-
-
-
-
-yçT‚¢‚½“_z
-‡@while True‚É‚æ‚è‰i‰“‚ÉƒXƒNƒŒƒCƒsƒ“ƒO‚ðs‚Á‚Ä‚µ‚Ü‚¤
-¨ƒy[ƒWŠÄŽ‹•Ï”‚ð’è‹`‚µAŠeƒy[ƒWƒXƒNƒŒƒCƒsƒ“ƒOŠJŽnŽžA•Ï”‚É‚P‚ð‘«‚·‚±‚Æ‚É‚æ‚èƒy[ƒWŠÄŽ‹‚ðs‚Á‚½Bif•¶‚ÅðŒ•ªŠò‚ðs‚¢Žw’è‚µ‚½ðŒ‚ð–ž‚½‚¹‚Îˆ—‚ð”²‚¯‚ê‚é‚æ‚¤‚É‚µ‚½B
-
-‡Acsvƒtƒ@ƒCƒ‹‚Öo—Í‚µ‚½ÛA•¶Žš‚ª˜A‚È‚Á‚ÄŒ©‚É‚­‚¢
-¨to_csvƒƒ\ƒbƒh‚Ìˆø”‚Éusep="@"v‚ð“n‚·‚±‚Æ‚ÅƒXƒy[ƒX‚ª‹ó‚«Œ©‚â‚·‚­‚È‚Á‚½B
-
-‡BƒƒOo—Í‚Å‰º‹L‚ÌƒR[ƒh‚ð‹Lq‚µ‚½‚ªA
-------------------------------------------------
-dt = datetime.datetime.now()
-now_time = dt.strftime("%Y”N%mŒŽ%d“ú %H:%M:%S")
-with open("log.txt", "a", encoding="utf-8") as f:
-	print(now_time, name.text, sep="@", file=f)
-------------------------------------------------
-ƒƒO‚ðo—Í‚µ‚½‚¢Žž‚Í‰½‰ñ‚àã‹LƒR[ƒh‚ð‘‚­‚Ì‚ÍŒø—¦‚ªˆ«‚­A•ÛŽç«‚àˆ«‚¢B
-‰º‹L‚Ì‚æ‚¤‚ÉŠÖ”‚É‚Ü‚Æ‚ß‚é•K—v‚ª‚ ‚é‚ÆŠ´‚¶‚½B
-------------------------------------------------
-def log(txt):
-    now=datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    logStr = '[%s: %s] %s' % ('log',now , txt)
-    # ƒƒOo—Í
-    with open(log_file_path, 'a', encoding='utf-8_sig') as f:
-        f.write(logStr + '\n')
-    print(logStr)
-------------------------------------------------
-
-‡CChromeƒhƒ‰ƒCƒo[XV‚ÅƒGƒ‰[‚ª”­¶
-¨ƒlƒbƒg‚Å’²‚×‘Îˆ‚·‚é‚àó‹µ‚Í•Ï‚í‚ç‚¸Bˆê“xAwebdriver_manager‚ðÄƒCƒ“ƒXƒg[ƒ‹‚µ‚ÄãŽè‚­‚¢‚­B
+ã€å­¦ã‚“ã ç‚¹ã€‘
+ãƒ»åˆ†ã€ãƒŸãƒªç§’è¨ˆç®—ã‚’è¡Œã†éš›ã¯ã©ã¡ã‚‰ã‹ã«çµ±ä¸€ã—ã€è¨ˆç®—ã‚’è¡Œã†ã€‚
+ãƒ»å¤‰æ›ã®éš›ã€Œ1000 * 60ã€ã‚’ã‚³ãƒ¼ãƒ‰å†…ã«ä½•å›žã‚‚æ›¸ã„ã¦ã—ã¾ã£ã¦ã„ãŸã€‚è¨˜è¿°ãƒŸã‚¹ã‚‚èµ·ã“ã‚Šã‚„ã™ãã€ä¿å®ˆæ€§ã‚‚æ‚ªã„ãŸã‚å®šæ•°ã«ã¾ã¨ã‚ãŸæ–¹ãŒè‰¯ã„ã€‚
+------------------------------------------
+final int CONV_MINUTE_TO_MSEC = 1000 * 60; //10è¡Œç›®
+final int CONV_HOUR_TO_MINUTE = 60;        //11è¡Œç›®
+------------------------------------------
