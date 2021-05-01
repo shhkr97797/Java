@@ -1,36 +1,36 @@
 import java.sql.Time;
 
-public class CalcWorkingTime {
+public class WorkingTime {
 
 	public static void main(String[] args) {
 
-		/*---------- ’è” ----------*/
+		/*---------- å®šæ•° ----------*/
 		final int HOURLY_SALARY = 900;
 		final int MINUTE_SALALY = HOURLY_SALARY / 60;
 		final int CONV_MINUTE_TO_MSEC = 1000 * 60;
 		final int CONV_HOUR_TO_MINUTE = 60;
-		final long WORK_TIME_TYPE01_END = 6 * CONV_HOUR_TO_MINUTE;  //6ŠÔ–¢–
-		final long WORK_TIME_TYPE02_START = 6 * CONV_HOUR_TO_MINUTE;//6ŠÔˆÈã8ŠÔ–¢–ŠJn
-		final long WORK_TIME_TYPE02_END = 6 * CONV_HOUR_TO_MINUTE;  //6ŠÔˆÈã8ŠÔ–¢–I—¹
-		final long REST_TYPE01 = 45 * CONV_MINUTE_TO_MSEC;          //6ŠÔ–¢–‹xŒe
-		final long REST_TYPE02 = 60 * CONV_MINUTE_TO_MSEC;          //8ŠÔˆÈã‹xŒe
-		final int ACTUAL_WORK_TIME_OVER = 8 * CONV_HOUR_TO_MINUTE;  //c‹Æ‚ª”­¶‚·‚é˜J“­ŠÔi8ŠÔj
-		final double OVER_WORK_RATE = 1.25;                         //c‹ÆƒŒ[ƒg
+		final long WORK_TIME_TYPE01_END = 6 * CONV_HOUR_TO_MINUTE;  //6æ™‚é–“æœªæº€
+		final long WORK_TIME_TYPE02_START = 6 * CONV_HOUR_TO_MINUTE;//6æ™‚é–“ä»¥ä¸Š8æ™‚é–“æœªæº€é–‹å§‹
+		final long WORK_TIME_TYPE02_END = 6 * CONV_HOUR_TO_MINUTE;  //6æ™‚é–“ä»¥ä¸Š8æ™‚é–“æœªæº€çµ‚äº†
+		final long REST_TYPE01 = 45 * CONV_MINUTE_TO_MSEC;          //6æ™‚é–“æœªæº€ä¼‘æ†©
+		final long REST_TYPE02 = 60 * CONV_MINUTE_TO_MSEC;          //8æ™‚é–“ä»¥ä¸Šä¼‘æ†©
+		final int ACTUAL_WORK_TIME_OVER = 8 * CONV_HOUR_TO_MINUTE;  //æ®‹æ¥­ãŒç™ºç”Ÿã™ã‚‹åŠ´åƒæ™‚é–“ï¼ˆ8æ™‚é–“ï¼‰
+		final double OVER_WORK_RATE = 1.25;                         //æ®‹æ¥­ãƒ¬ãƒ¼ãƒˆ
 
-		/*---------- •Ï” ----------*/
-		Time startTime = Time.valueOf(args[0]);                     //o‹ÎŠÔ
-		Time finishTime = Time.valueOf(args[1]);                    //‘Ş‹ÎŠÔ
-		long workTime = finishTime.getTime() - startTime.getTime(); //˜J“­ŠÔiƒ~ƒŠ•bj
-		int actualWorkTime = 0;                                     //À˜J“­ŠÔi•ªj
-		int partTimeJobSalary = 0;                                  //‹‹—^
+		/*---------- å¤‰æ•° ----------*/
+		Time startTime = Time.valueOf(args[0]);                     //å‡ºå‹¤æ™‚é–“
+		Time finishTime = Time.valueOf(args[1]);                    //é€€å‹¤æ™‚é–“
+		long workTime = finishTime.getTime() - startTime.getTime(); //åŠ´åƒæ™‚é–“ï¼ˆãƒŸãƒªç§’ï¼‰
+		int actualWorkTime = 0;                                     //å®ŸåŠ´åƒæ™‚é–“ï¼ˆåˆ†ï¼‰
+		int partTimeJobSalary = 0;                                  //çµ¦ä¸
 
 
 		/*---------------------------
-			˜J“­ŠÔŒvZiƒ~ƒŠ•b‚©‚ç•ª‚É•ÏŠ·j
+			åŠ´åƒæ™‚é–“è¨ˆç®—ï¼ˆãƒŸãƒªç§’ã‹ã‚‰åˆ†ã«å¤‰æ›ï¼‰
 		---------------------------*/
 		if(workTime <= WORK_TIME_TYPE01_END){
 
-			actualWorkTime = (int)(workTime / CONV_MINUTE_TO_MSEC); //workTime € i1000 * 60j
+			actualWorkTime = (int)(workTime / CONV_MINUTE_TO_MSEC); //workTime Ã· ï¼ˆ1000 * 60ï¼‰
 
 		}else if(workTime >= WORK_TIME_TYPE02_START && workTime <= WORK_TIME_TYPE02_END){
 
@@ -44,7 +44,7 @@ public class CalcWorkingTime {
 
 
 		/*---------------------------
-			‹‹—^ŒvZ
+			çµ¦ä¸è¨ˆç®—
 		---------------------------*/
 		if(actualWorkTime >= ACTUAL_WORK_TIME_OVER){
 
@@ -59,8 +59,8 @@ public class CalcWorkingTime {
 
 
 		/*---------------------------
-			‹‹—^ŒvZ
+			çµ¦ä¸è¨ˆç®—
 		---------------------------*/
-		System.out.println("–{“ú‚Ì‹‹—^‚Í" + partTimeJobSalary + "‚Å‚·B");
+		System.out.println("æœ¬æ—¥ã®çµ¦ä¸ã¯" + partTimeJobSalary + "ã§ã™ã€‚");
 	}
 }
