@@ -1,25 +1,20 @@
-�y�T�v�z
-�R�}���h���C���������󂯎����2�̐����i�o�Ύ��ԂƑދΎ��ԁj�ɑ΂��A�x�e���Ԃ������������������߁A���P�ʂŌv�Z���s���B
-���J������
-���^�F����900�~�i����15�~�j
-�x�e�F45���i8���Ԗ����̏ꍇ�j60���i8���Ԉȏ�̏ꍇ�j
-�c�ƁF8���Ԃ𒴂������ɑ΂�1.25�{
+【概要】
+コマンドライン引数より受け取った3つの名前（1つ目・2つ目：プレイヤー名、3つ目：審判名）を受け取る。
+プレイヤーの出し手を審判が確認し、勝敗判定を行い、プレイヤーの出し手及び勝敗結果をコマンドプロンプトへ出力を行う。
+
+【ツール・環境】
+OS：Windows10
+エディタ：Visial Studio Code
 
 
-�y�c�[���E���z
-OS�FWindows10
-���FAdoptOpenJDK
-�G�f�B�^�FVisial Studio Code
+【躓いた点】
+・getTimeメソッドは戻り値がミリ秒の為、労働時間計算の部分でミリ秒を分に変換せず計算したことにより計算が上手くいかなかった。
 
 
-�y�T�����_�z
-�EgetTime���\�b�h�͖߂�l���~���b�ׁ̈A�J�����Ԍv�Z�̕����Ń~���b�𕪂ɕϊ������v�Z�������Ƃɂ��v�Z����肭�����Ȃ������B
-
-
-�y�w�񂾓_�z
-�E���A�~���b�v�Z���s���ۂ͂ǂ��炩�ɓ��ꂵ�A�v�Z���s���B
-�E�ϊ��̍ہu1000 * 60�v���R�[�h���ɉ���������Ă��܂��Ă����B�L�q�~�X���N����₷���A�ێ琫���������ߒ萔�ɂ܂Ƃ߂������ǂ��B
+【学んだ点】
+・分、ミリ秒計算を行う際はどちらかに統一し、計算を行う。
+・変換の際「1000 * 60」をコード内に何回も書いてしまっていた。記述ミスも起こりやすく、保守性も悪いため定数にまとめた方が良い。
 ------------------------------------------
-final int CONV_MINUTE_TO_MSEC = 1000 * 60; //10�s��
-final int CONV_HOUR_TO_MINUTE = 60;        //11�s��
+final int CONV_MINUTE_TO_MSEC = 1000 * 60; //10行目
+final int CONV_HOUR_TO_MINUTE = 60;        //11行目
 ------------------------------------------
