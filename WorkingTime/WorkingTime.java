@@ -48,8 +48,7 @@ public class WorkingTime {
 		---------------------------*/
 		if(actualWorkTime >= ACTUAL_WORK_TIME_OVER){
 
-			partTimeJobSalary = (MINUTE_SALALY * ACTUAL_WORK_TIME_OVER)
-													+ (int)(OVER_WORK_RATE * (actualWorkTime - ACTUAL_WORK_TIME_OVER));
+			partTimeJobSalary = (MINUTE_SALALY * ACTUAL_WORK_TIME_OVER) + (int)(OVER_WORK_RATE * (actualWorkTime - ACTUAL_WORK_TIME_OVER));
 
 		}else{
 
