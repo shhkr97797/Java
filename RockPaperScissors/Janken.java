@@ -2,21 +2,21 @@ class Janken {
 	public static void main (String[] args) {
 
 
-		/* ƒvƒŒƒCƒ„[–¼AƒŒƒtƒFƒŠ[–¼ƒCƒ“ƒXƒ^ƒ“ƒX
+		/* ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼åã€ãƒ¬ãƒ•ã‚§ãƒªãƒ¼åã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹
 		------------------------------ */
 		Player player01 = new Player(args[0]);
 		Player player02 = new Player(args[1]);
 		Referee ref = new Referee(args[2]);
 
 
-		/* o—Í
+		/* å‡ºåŠ›
 		------------------------------ */
-		ref.startJanken();             //ŠJn‚Ì‡}
-		player01.makeHandStatus();     //player01‚Ìo‚µè‚ğŒˆ‚ß‚é
-		player02.makeHandStatus();     //player02‚Ìo‚µè‚ğŒˆ‚ß‚é
-		ref.checkHands(player01);      //player01‚Ìè‚ğŠm”F
-		ref.checkHands(player02);      //player02‚Ìè‚ğŠm”F
-		ref.judge(player01, player02); //Ÿ”s”»’è
+		ref.startJanken();             //é–‹å§‹ã®åˆå›³
+		player01.makeHandStatus();     //player01ã®å‡ºã—æ‰‹
+		player02.makeHandStatus();     //player02ã®å‡ºã—æ‰‹
+		ref.checkHands(player01);      //å¯©åˆ¤ãŒplayer01ã®æ‰‹ã‚’ç¢ºèª
+		ref.checkHands(player02);      //å¯©åˆ¤ãŒplayer02ã®æ‰‹ã‚’ç¢ºèª
+		ref.judge(player01, player02); //å¯©åˆ¤ã®å‹æ•—åˆ¤å®š
 
 
 
