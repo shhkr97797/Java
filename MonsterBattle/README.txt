@@ -31,48 +31,21 @@ mainBattleメソッドが実行されると2体のモンスターがバトルを
 　・メソッドに修飾子を付与、getter/setterの作成
  
 4．「Monster3.java」 を継承してサブクラス「Hitokake.java」の作成
+　・フィールドを作成（private）
 　・コンストラクタ作成（引数なし、引数2つ、引数3つ）
 　・levelUpメソッドのオーバーライド
  
 5．「Monster3.java」 を継承してサブクラス「Fushigiyade.java」の作成
+　・フィールドを作成（private）
 　・コンストラクタ作成（引数なし、引数2つ、引数3つ）
 　・levelUpメソッドのオーバーライド
 
 
 【学んだ点】
 ・クラスの継承
-・Private変数
+・private → そのクラス内からのみアクセス可能
+・getter/setter → privateが付いている変数、メソッドにクラス外からアクセスに使用（参照：getter 代入：setter）
 ・this()
-・super()
+・super() → 親クラスのオブジェクトを参照
 ・Bigdecimalによる計算、丸目処理
 https://qiita.com/shiho97797/items/2a4caca62b331aa6ebfb
-
-
-【躓いた点】
-①while Trueにより永遠にスクレイピングを行ってしまう
-→ページ監視変数を定義し、各ページスクレイピング開始時、変数に１を足すことによりページ監視を行った。if文で条件分岐を行い指定した条件を満たせば処理を抜けれるようにした。
-
-②csvファイルへ出力した際、文字が連なって見にくい
-→to_csvメソッドの引数に「sep="　"」を渡すことでスペースが空き見やすくなった。
-
-③ログ出力で下記のコードを記述したが、
-------------------------------------------------
-dt = datetime.datetime.now()
-now_time = dt.strftime("%Y年%m月%d日 %H:%M:%S")
-with open("log.txt", "a", encoding="utf-8") as f:
-	print(now_time, name.text, sep="　", file=f)
-------------------------------------------------
-ログを出力したい時は何回も上記コードを書くのは効率が悪く、保守性も悪い。
-下記のように関数にまとめる必要があると感じた。
-------------------------------------------------
-def log(txt):
-    now=datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    logStr = '[%s: %s] %s' % ('log',now , txt)
-    # ログ出力
-    with open(log_file_path, 'a', encoding='utf-8_sig') as f:
-        f.write(logStr + '\n')
-    print(logStr)
-------------------------------------------------
-
-④Chromeドライバー更新でエラーが発生
-→ネットで調べ対処するも状況は変わらず。一度、webdriver_managerを再インストールして上手くいく。
